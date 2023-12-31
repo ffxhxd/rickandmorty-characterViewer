@@ -1,71 +1,50 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Rick and Morty - Assignment for BILD
 
-## Available Scripts
+This is a Rick and Morty character viewer application that allows users to explore a list of characters, episodes and locations from the show and view detailed information about each character. The application is built using React.js.
 
-In the project directory, you can run:
+# Live website link : <https://linka.com>
+## Features
 
-### `npm start`
+- Character page : Displays list of the character cards containing the name, image, location, origin, staus of the character.
+- Character list page : Displays more details about the character.
+- Episode page : Displays list of the character cards containing the name, image, location, origin, staus of the character.
+- Locations page : Displays list of the character cards containing the name, image, location, origin, staus of the character.
+- Pagination : Implemented pagination, ensuring seamless User Experience
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
+To run the application locally, follow these steps:
 
-### `npm test`
+Clone the repository:
+- git clone <https://github.com/ffxhxd/rickandmorty-bild.git>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Navigate to the project directory:
+- cd rickandmorty-bild
 
-### `npm run build`
+Install dependencies:
+- npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start the development server:
+- npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Open your browser and go to http://localhost:3000 to view the Rick and Morty Character Viewer.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- JavaScript 
+- React.js
+- Tailwind CSS
+- SCSS 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# rickandmorty-bild" 
+## Best industry standard practices followed
+- Custom hooks for API Calls.
+- All hard coded strings and URLs in a seperate constant.js file.
+- Utils folder to store utility functions and helper modules.
+- All the components have less than 80 - 90 lines of code.
+- Implemented debouncing in pagination to reduce the number of API calls by 50%.
+- DRY principle followed ✅
+- Single responsibility principle maintained ✅
+- Clean, optimzed and scalable code base ✅
+- Seperate folders for components and their styling files.
