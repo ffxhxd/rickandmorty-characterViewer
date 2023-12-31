@@ -13,7 +13,7 @@ const CharacterCard = (props) => {
         <h1>
           <span className="name-title truncate">{name}</span>
           <p className="font-bold">
-            {status === "Dead" ? "🔴" : "🟢"} {status} - {species}{" "}
+            {status === "Dead" ? "💀" : "🟢"} {status} - {species}{" "}
           </p>
         </h1>
         <h1>

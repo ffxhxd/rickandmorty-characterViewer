@@ -1,6 +1,10 @@
 .characters-container{
- margin:2rem 1rem;
+ margin:0;
+ background-image: url('../../Assets/charactersPageBG.jpg');
  display: flex;
- flex-wrap: wrap;
- gap: 1.5rem;
+ flex-direction: column;
+ background-size: cover;
+ background-position: center;
+ max-height: 100vh;
+ overflow-y: scroll;
 }

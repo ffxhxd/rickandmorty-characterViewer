@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useCharacters from "../../Utils/useCharacters";
 import CharacterCard from "./CharacterCard";
+import Header from "../Header/Header";
 import Loader from "../Loader/Loader";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -27,23 +28,31 @@ const Characters = () => {
   }
 
   return (
-    <>
-      <div className="flex justify-center mt-10 p-4 gap-9 items-center">
-        <button className="" onClick={handlePageDown}>
-          <IoIosArrowBack size={40} />
-        </button>
-        <h1 className="text-3xl font-bold">{pageNumber}</h1>
-        <button className="" onClick={handlePageUp}>
-          <IoIosArrowForward size={40} />
-        </button>
+    <div>
+      <div className="characters-container no-scrollbar">
+        <Header />
+        <div className="flex justify-center p-4 gap-9 items-center sticky top-0 z-10 text-white">
+          <button
+            className="bg-white text-black p-2 rounded-full hover:bg-gray-300 transition duration-300"
+            onClick={handlePageDown}
+          >
+            <IoIosArrowBack size={30} />
+          </button>
+          <h1 className="text-4xl font-bold">{pageNumber}</h1>
+          <button
+            className="bg-white text-black p-2 rounded-full hover:bg-gray-300 transition duration-300"
+            onClick={handlePageUp}
+          >
+            <IoIosArrowForward size={30} />
+          </button>
+        </div>
+        <div className="w-full flex flex-wrap">
+          {cards.map((curr) => (
+            <CharacterCard key={curr.id} info={curr} />
+          ))}
+        </div>
       </div>
-
-      <div className="characters-container">
-        {cards.map((curr) => (
-          <CharacterCard key={curr.id} info={curr} />
-        ))}
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -1,50 +1,44 @@
-import "./Header.scss";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { RxCross1 } from "react-icons/rx";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
+import logoImg from "../../Assets/logo.png";
+import "./Header.scss";
 import { useState } from "react";
-import { RICKMORTY_LOGO_URL } from "../../Utils/Constants";
 
 const Header = () => {
-  const [toggleMenuButton, setToggleMenuButton] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="header-container">
-      <img src={RICKMORTY_LOGO_URL} alt="Logo-RickandMorty" />
-      <nav className="nav responsive-nav">
-        <div>
-          {toggleMenuButton ? (
-            <RxCross1
-              className="toggleIcons"
-              size={40}
-              onClick={() => setToggleMenuButton(!toggleMenuButton)}
-            />
-          ) : (
-            <RxHamburgerMenu
-              className="toggleIcons"
-              size={40}
-              onClick={() => setToggleMenuButton(!toggleMenuButton)}
-            />
-          )}
-        </div>
-        {toggleMenuButton && (
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/characters">Characters</Link>
-            </li>
-            <li>
-              <Link to="/episodes">Episodes</Link>
-            </li>
-            <li>
-              <Link to="/locations">Locations</Link>
-            </li>
-          </ul>
+    <nav className="main-nav" role="nav-bar">
+      <div className="logo">
+        <img className="logo-img" src={logoImg} alt="rick and morty logo" />
+      </div>
+
+      <div className={toggle ? "mobile" : "menu-link"}>
+        <ul className="nav-ul res">
+          <Link to="/">
+            <li className="nav-li">Home</li>
+          </Link>
+          <Link to="/characters">
+            <li className="nav-li">Characters</li>
+          </Link>
+          <Link to="/episodes">
+            <li className="nav-li">Episodes</li>
+          </Link>
+          <Link to="/locations">
+            <li className="nav-li">Locations</li>
+          </Link>
+        </ul>
+      </div>
+
+      <div className="hamburger-menu">
+        {toggle ? (
+          <RxCross2 size={30} onClick={() => setToggle(!toggle)} />
+        ) : (
+          <GiHamburgerMenu size={30} onClick={() => setToggle(!toggle)} />
         )}
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 };
 

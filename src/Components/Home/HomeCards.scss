@@ -1,12 +1,13 @@
 .homecards-container {
     position: relative;
-    width: 20rem; 
-    height: 30rem; 
+    width: 15rem; 
+    height: 20rem; 
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease-in-out; 
     border-radius: 1rem;
     cursor: pointer;
+  
     
   
     &:hover {
