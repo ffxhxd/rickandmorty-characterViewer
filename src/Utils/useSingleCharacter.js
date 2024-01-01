@@ -6,7 +6,6 @@ const useSignleCharacter = (id) => {
 
   useEffect(() => {
     fetchData();
-    // console.log("useEffectCalled");
   }, []);
 
   const fetchData = async () => {

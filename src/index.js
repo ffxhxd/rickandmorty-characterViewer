@@ -8,6 +8,7 @@ import Episodes from "./Components/Episodes/Episodes";
 import Locations from "./Components/Locations/Locations";
 import Home from "./Components/Home/Home";
 import CharacterDetails from "./Components/CharacterDetails/CharacterDetails";
+import ErrorPage from "./Components/ErrorPage.js/ErrorPage";
 
 //Defining Navigation Routes for the app
 const appRoutes = createBrowserRouter([
@@ -36,6 +37,7 @@ const appRoutes = createBrowserRouter([
         element: <CharacterDetails />,
       },
     ],
+    errorElement: <ErrorPage />,
   },
 ]);
 

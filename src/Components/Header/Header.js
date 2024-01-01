@@ -9,8 +9,8 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="main-nav" role="nav-bar">
-      <div className="logo">
+    <nav className="main-nav">
+      <div className="logo flex items-center">
         <img className="logo-img" src={logoImg} alt="rick and morty logo" />
       </div>
 

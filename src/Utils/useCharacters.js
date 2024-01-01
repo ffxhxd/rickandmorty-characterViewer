@@ -5,12 +5,18 @@ const useCharacters = (page) => {
   const [charactersData, setCharactersData] = useState(null);
 
   useEffect(() => {
-    fetchData(page);
-    // console.log("useEffectCalled");
+    //debouncing
+    const timer = setTimeout(() => fetchData(), 200);
+
+    //clean up
+    return () => {
+      clearTimeout(timer);
+    };
   }, [page]);
 
-  const fetchData = async (page) => {
+  const fetchData = async () => {
     try {
+      //console.log("api called");
       const data = await fetch(CHARACTERS_API_URL + page);
       const json = await data.json();
       setCharactersData(json);

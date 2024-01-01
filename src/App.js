@@ -4,12 +4,7 @@ import { Outlet } from "react-router";
 import "./App.scss";
 
 const App = () => {
-  return (
-    <>
-      {/* <Header /> */}
-      <Outlet />
-    </>
-  );
+  return <Outlet />;
 };
 
 export default App;

@@ -9,6 +9,7 @@ import "./Character.scss";
 
 const Characters = () => {
   const [pageNumber, setPageNumber] = useState(1);
+  const [filterStatus, setFilterStatus] = useState(null);
   const data = useCharacters(pageNumber);
   const cards = data?.results;
 
@@ -23,13 +24,29 @@ const Characters = () => {
       : setPageNumber(data?.info?.pages);
   };
 
+  const handleAliveFilter = () => {
+    setFilterStatus("Alive");
+  };
+
+  const handleDeadFilter = () => {
+    setFilterStatus("Dead");
+  };
+
+  const handleClearFilter = () => {
+    setFilterStatus(null);
+  };
+
   if (!data) {
     return <Loader />;
   }
 
+  const filteredCards = filterStatus
+    ? cards.filter((character) => character.status === filterStatus)
+    : cards;
+
   return (
     <div>
-      <div className="characters-container no-scrollbar">
+      <div className="characters-container h-screen no-scrollbar">
         <Header />
         <div className="flex justify-center p-4 gap-9 items-center sticky top-0 z-10 text-white">
           <button
@@ -46,8 +63,30 @@ const Characters = () => {
             <IoIosArrowForward size={30} />
           </button>
         </div>
+        <div className="flex items-center justify-center gap-4">
+          <button
+            onClick={handleAliveFilter}
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Alive
+          </button>
+
+          <button
+            onClick={handleDeadFilter}
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Dead
+          </button>
+
+          <button
+            onClick={handleClearFilter}
+            className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Clear Filter
+          </button>
+        </div>
         <div className="w-full flex flex-wrap">
-          {cards.map((curr) => (
+          {filteredCards.map((curr) => (
             <CharacterCard key={curr.id} info={curr} />
           ))}
         </div>
