@@ -3,7 +3,7 @@
 
 This is a Rick and Morty character viewer application that allows users to explore a list of characters, episodes and locations from the show and view detailed information about each character. The application is built using React.js.
 
-# Live website link : <https://linka.com>
+# Live website link : <https://illustrious-donut-0ef350.netlify.app/>
 ## Features
 
 - Character page : Displays list of the character cards containing the name, image, location, origin, staus of the character.
@@ -74,3 +74,8 @@ Comprehensive error-handling mechanisms have been implemented, providing meaning
 
 - Thorough Manual Testing:
 Rigorous manual testing has been conducted across various devices, ensuring a robust and user-friendly application.
+## Authors
+
+- [@fahad](https://www.github.com/ffxhxd)
+- Made with ❤️ for Bild.
+
