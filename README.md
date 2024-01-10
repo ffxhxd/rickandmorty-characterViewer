@@ -77,5 +77,4 @@ Rigorous manual testing has been conducted across various devices, ensuring a ro
 ## Authors
 
 - [@fahad](https://www.github.com/ffxhxd)
-- Made with ❤️ for Bild.
 
